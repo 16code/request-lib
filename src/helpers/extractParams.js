@@ -21,6 +21,8 @@ export default function extractParams(data, params) {
         p.forEach(parserParams);
     } else if (utils.isFormData(params)) {
         params.forEach(parserParams);
+    } else if (utils.isObject(params)) {
+        utils.forEach(params, parserParams);
     }
     return ids;
 }
