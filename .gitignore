@@ -18,7 +18,6 @@ lerna-debug.log*
 bower_components
 node_modules
 dist
-build
 # Thumbnails
 ._*
 .font-spider
