@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <title>RequestJs</title>
+</head>
+<body>
+    <div style="padding: 20px;">
+        <div class="columns">
+            <div class="column">
+                <div class="box">
+                    <button class="button" id="longRequest">Long Request</button>
+                    <button class="button is-primary" id="cancelRequest">Cancel Request</button>
+                </div>
+                <div class="box">
+                    <div class="block">
+                        <form name="downloadBufferForm">
+                            <label class="label">Download buffer</label>
+                            <div class="field is-grouped">
+                                <div class="control is-expanded">
+                                    <input class="input" name="fileName" placeholder="file name" value="5.webp"
+                                        required>
+                                </div>
+                                <div class="control">
+                                    <button class="button" type="submit">Download</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="block">
+                        <form name="uploadBufferForm">
+                            <label class="label">Upload buffer</label>
+                            <div class="field is-grouped">
+                                <div class="control is-expanded">
+                                    <input class="input" name="buffer" type="file" required>
+                                </div>
+                                <div class="control">
+                                    <button class="button" type="submit">Upload</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box">
+                    <form name="login" autocomplete="off">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control">
+                                <input class="input" name="username" placeholder="e.g. user">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Checkbox</label>
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input name="options[]" type="checkbox" value="A"> A </label>
+                                <label class="checkbox">
+                                    <input name="options[]" type="checkbox" value="B"> B </label>
+                                <label class="checkbox">
+                                    <input name="options[]" type="checkbox" value="C"> C </label>
+                                <label class="checkbox">
+                                    <input name="options[]" type="checkbox" value="D"> D </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Radio</label>
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="answer"> Yes </label>
+                                <label class="radio">
+                                    <input type="radio" name="answer"> No </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">File</label>
+                            <div class="file is-boxed is-fullwidth">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="file">
+                                    <span class="file-cta">
+                                        <span class="file-label"> Choose a file… </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button type="submit" class="button is-primary is-fullwidth">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/test.js"></script>
+</body>
+</html>

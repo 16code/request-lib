@@ -1,0 +1,57 @@
+{
+  "name": "request",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./build/request.es.js",
+      "require": "./build/request.cjs.js"
+    }
+  },
+  "main": "./build/request.cjs.js",
+  "module": "./build/request.es.js",
+  "browser": "./build/request.umd.js",
+  "types": "index.d.ts",
+  "files": [
+    "build"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env BROWSERSLIST_ENV=development BABEL_ENV=development NODE_ENV=development rollup -c -w & node sandbox/server.js",
+    "build": "yarn run clean && yarn run build:js",
+    "build:js": "cross-env BROWSERSLIST_ENV=production BABEL_ENV=production NODE_ENV=production rollup -c",
+    "build:types": "node_modules/.bin/tsc --declaration --allowJs --emitDeclarationOnly",
+    "clean": "rimraf build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.18.9",
+    "@babel/plugin-syntax-import-assertions": "^7.20.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-json": "^5.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.1.0",
+    "@types/lodash": "^4.14.191",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.28.0",
+    "eslint-plugin-import": " ^2.26.0",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.5.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "form-data": "^4.0.0"
+  }
+}

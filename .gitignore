@@ -1,0 +1,44 @@
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+.DS_Store
+*.DS_Store
+.AppleDouble
+.LSOverride
+.git
+.git/*
+*.bak
+.bowerrc
+bower_components
+node_modules
+dist
+build
+# Thumbnails
+._*
+.font-spider
+*.log
+.cache
+test/**/*
+dist/**/*
+build/**/*
+.idea
+*.zip
+npm-debug.log
+
+# not using Zero-Installs
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+sandbox/js
+

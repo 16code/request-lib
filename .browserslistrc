@@ -1,0 +1,7 @@
+[production]
+defaults, 
+not dead, 
+supports es6-module
+
+[development]
+last 1 chrome version
