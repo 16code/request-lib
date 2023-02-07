@@ -4,7 +4,7 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
+      "types": "./src/index.d.ts",
       "import": "./build/request.es.js",
       "require": "./build/request.cjs.js"
     }
@@ -12,7 +12,7 @@
   "main": "./build/request.cjs.js",
   "module": "./build/request.es.js",
   "browser": "./build/request.umd.js",
-  "types": "index.d.ts",
+  "types": "./src/index.d.ts",
   "files": [
     "build"
   ],
