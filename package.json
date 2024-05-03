@@ -12,7 +12,7 @@
   "main": "./build/request.cjs.js",
   "module": "./build/request.es.js",
   "browser": "./build/request.umd.js",
-  "types": "./src/index.d.ts",
+  "types": "./build/types/index.d.ts",
   "files": [
     "build"
   ],
