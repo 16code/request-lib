@@ -1,3 +1,4 @@
 'use strict';
-import 'formdata-polyfill';
+import 'formdata-polyfill/FormData';
+
 export default FormData;
